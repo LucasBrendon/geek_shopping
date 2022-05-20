@@ -1,4 +1,5 @@
 using GeekShopping.ProductAPI.Model.Context;
+using GeekShopping.ProductAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,10 +29,12 @@ namespace GeekShopping.ProductAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             var connection = Configuration.GetConnectionString("MysqlConnectionString");
-
             services.AddDbContext<MySqlDbContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 29))));
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
