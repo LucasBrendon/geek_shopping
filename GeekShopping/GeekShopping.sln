@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{68
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductAPI", "..\GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{3DBFF385-9666-415F-93F0-698A17E751A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Web", "..\GeekShopping.Web\GeekShopping.Web.csproj", "{8B38DE97-E9BB-44E8-8DD5-15DEBABB0239}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Web", "..\GeekShopping.Web\GeekShopping.Web.csproj", "{8B38DE97-E9BB-44E8-8DD5-15DEBABB0239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.IdentityServer", "..\GeekShopping.IdentityServer\GeekShopping.IdentityServer.csproj", "{DE6687FF-AFC0-4FDF-B939-27B85FE7710B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{8B38DE97-E9BB-44E8-8DD5-15DEBABB0239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B38DE97-E9BB-44E8-8DD5-15DEBABB0239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B38DE97-E9BB-44E8-8DD5-15DEBABB0239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6687FF-AFC0-4FDF-B939-27B85FE7710B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6687FF-AFC0-4FDF-B939-27B85FE7710B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6687FF-AFC0-4FDF-B939-27B85FE7710B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6687FF-AFC0-4FDF-B939-27B85FE7710B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3DBFF385-9666-415F-93F0-698A17E751A9} = {39E0C5BA-48A2-4F6B-A93D-7D79508740CC}
 		{8B38DE97-E9BB-44E8-8DD5-15DEBABB0239} = {68947452-4F5B-497E-82AA-8B45A24653B5}
+		{DE6687FF-AFC0-4FDF-B939-27B85FE7710B} = {39E0C5BA-48A2-4F6B-A93D-7D79508740CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0CB7802-D75E-49E8-8C1B-EC859FD01428}
