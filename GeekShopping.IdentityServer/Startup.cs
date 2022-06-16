@@ -1,4 +1,5 @@
 using GeekShopping.IdentityServer.Configuration;
+using GeekShopping.IdentityServer.Initializer;
 using GeekShopping.IdentityServer.Model;
 using GeekShopping.IdentityServer.Model.Context;
 using Microsoft.AspNetCore.Builder;
@@ -43,6 +44,8 @@ namespace GeekShopping.IdentityServer
               .AddInMemoryClients(IdentityConfiguration.Clients)
               .AddAspNetIdentity<ApplicationUser>();
 
+            services.AddScoped<IDbInitializer, DbInitializer>();
+
             builder.AddDeveloperSigningCredential();
 
 
@@ -50,7 +53,7 @@ namespace GeekShopping.IdentityServer
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer initializer)
         {
             if (env.IsDevelopment())
             {
@@ -70,6 +73,8 @@ namespace GeekShopping.IdentityServer
             app.UseIdentityServer();
 
             app.UseAuthorization();
+
+            initializer.Initialize();
 
             app.UseEndpoints(endpoints =>
             {
