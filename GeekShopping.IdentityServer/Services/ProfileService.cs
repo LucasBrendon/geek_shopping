@@ -25,7 +25,7 @@ namespace GeekShopping.IdentityServer.Services
             _userManager = userManager;
             _roleManager = roleManager;
             _userClaimsPrincipalFactory = userClaimsPrincipalFactory;
-        }
+        } 
 
         public async Task GetProfileDataAsync(ProfileDataRequestContext context)
         {
